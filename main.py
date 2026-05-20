@@ -1,1 +1,26 @@
-
+def exibir_opcoes():
+    print("1. Cadastro de Pedidos")
+    print("2. Cadastro de Entregadores")
+    print("3. Atualização dos Pedidos")
+    print("4. Consulta")
+    print("5. Relatórios Operacionais")
+    print("6. Finalizar sistema")
+    opcao = int(input("Escolha uma opção: "))
+    try:
+        match opcao:
+            case 1:
+                pass
+            case 2:
+                pass
+            case 3:
+                pass
+            case 4:
+                pass
+            case 5:
+                pass
+            case 6:
+                pass
+            case _:
+                print("Opção Inválida!")
+    except:
+        print("Opção Inválida!")
