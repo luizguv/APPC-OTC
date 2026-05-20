@@ -1,7 +1,7 @@
 # Operação Turno Crítico
 
 
-## Grupo 5
+## Grupo  
 * **João Pedro Silveira de Souza** - RA: 26009261
 * **Luiz Gustavo Urias Vieira** - RA: 26005065
 
