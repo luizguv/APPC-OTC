@@ -11,17 +11,22 @@ def exibir_opcoes():
     try:
         match opcao:
             case 1:
-                pass
+                cadastro_pedidos()
+                return opcao
             case 2:
                 pass
+                return opcao
             case 3:
                 pass
+                return opcao
             case 4:
                 pass
+                return opcao
             case 5:
                 pass
             case 6:
                 finalizar_sistema()
+                return opcao
             case _:
                 print("Opção Inválida!")
     except:
@@ -31,5 +36,9 @@ def finalizar_sistema():
     print("========================")
     print("Finalizando o sistema...")
     print("========================")
+
+def cadastro_pedidos(opcao):
+    print(f"Você escolheu a opção: {opcao}")
+    print(f"")
 
 exibir_opcoes()
