@@ -1,4 +1,7 @@
+import os
+
 def exibir_opcoes():
+    os.system('cls')
     print("========================")
     print("1. Cadastro de Pedidos")
     print("2. Cadastro de Entregadores")
@@ -14,16 +17,17 @@ def exibir_opcoes():
                 cadastro_pedidos(opcao)
                 return opcao
             case 2:
-                pass
+                cadastro_entregadores()
                 return opcao
             case 3:
-                pass
+                atualizacao_pedidos()
                 return opcao
             case 4:
-                pass
+                consuta_informacoes()
                 return opcao
             case 5:
-                pass
+                relatorios_operacionais
+                return opcao
             case 6:
                 finalizar_sistema()
                 return opcao
@@ -33,6 +37,7 @@ def exibir_opcoes():
         print("Opção Inválida!")
 
 def finalizar_sistema():
+    os.system('cls')
     print("========================")
     print("Finalizando o sistema...")
     print("========================")
@@ -61,7 +66,31 @@ def cadastro_entregadores():
 
 def atualizacao_pedidos():
     print(f"Você escolheu a opção: 3. Atualização dos Pedidos")
-    alterar_status = int(input("Digite qual o status atual do pedido (1 - Pendente, 2 - Em Rota, 3 - Entregue e 4 - Cancelado): "))
+    print("1. Alterar status do pedido")
+    print("2. Cancelar Pedido")
+    print("3. Associar entregadores a pedidos")
+    print("4. Remover associação de entregador")
+    print("5. Voltar")
+    opcao_atualizacao_pedidos = int(input("Escolha uma opção: "))
+
+    while opcao_atualizacao_pedidos != 5:
+        match opcao_atualizacao_pedidos:
+            case 1:
+                pass
+                return opcao_atualizacao_pedidos
+            case 2:
+                pass
+                return opcao_atualizacao_pedidos
+            case 3:
+                pass
+                return opcao_atualizacao_pedidos
+            case 4:
+                pass
+                return opcao_atualizacao_pedidos
+            case 5:
+                exibir_opcoes()
+            case _:
+                print("Opção Inválida!")
 
 
 def consuta_informacoes():
@@ -92,7 +121,8 @@ def consuta_informacoes():
                 pass
                 return opcao_consulta_informacoes
             case 6:
-                pass
+                print("Voltando ao menu...")
+                exibir_opcoes()
                 return opcao_consulta_informacoes
             case _:
                 print("Opção Inválida!")
@@ -104,7 +134,8 @@ def relatorios_operacionais():
     print("1. Total de pedidos")
     print("2. Quantidade de pedidos")
     print("3. Entregador com maior número de entregas")
-    print("4. Voltar ao menu")
+    print("4. Pedidos com alta prioridade")
+    print("5. Voltar ao menu")
 
     opcao_relatorios_operacionais = int(input("Escolha uma opção: "))
     try:
@@ -125,5 +156,6 @@ def relatorios_operacionais():
                 print("Opção Inválida!")
     except:
         print("Opção Inválida!")
+
 
 exibir_opcoes()
