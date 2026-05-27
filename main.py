@@ -62,7 +62,68 @@ def cadastro_entregadores():
 def atualizacao_pedidos():
     print(f"Você escolheu a opção: 3. Atualização dos Pedidos")
     alterar_status = int(input("Digite qual o status atual do pedido (1 - Pendente, 2 - Em Rota, 3 - Entregue e 4 - Cancelado): "))
-    
+
+
+def consuta_informacoes():
+    print(f"Você escolheu a opção: 4. Consulta de informações")
+    print("1. Pedidos entregues")
+    print("2. Pedidos pendentes")
+    print("3. Buscar pedido por ID")
+    print("4. Entregadores disponíveis")
+    print("5. Entregas realizadas")
+    print("6. Voltar ao menu")
+
+    opcao_consulta_informacoes = int(input("Escolha uma opção: "))
+    try:
+        match opcao_consulta_informacoes:
+            case 1:
+                cadastro_pedidos(opcao_consulta_informacoes)
+                return opcao_consulta_informacoes
+            case 2:
+                pass
+                return opcao_consulta_informacoes
+            case 3:
+                pass
+                return opcao_consulta_informacoes
+            case 4:
+                pass
+                return opcao_consulta_informacoes
+            case 5:
+                pass
+                return opcao_consulta_informacoes
+            case 6:
+                pass
+                return opcao_consulta_informacoes
+            case _:
+                print("Opção Inválida!")
+    except:
+        print("Opção Inválida!")
+
+def relatorios_operacionais():
+    print(f"Você escolheu a opção: 5. Relatórios operacionais")
+    print("1. Total de pedidos")
+    print("2. Quantidade de pedidos")
+    print("3. Entregador com maior número de entregas")
+    print("4. Voltar ao menu")
+
+    opcao_relatorios_operacionais = int(input("Escolha uma opção: "))
+    try:
+        match opcao_relatorios_operacionais:
+            case 1:
+                cadastro_pedidos(opcao_relatorios_operacionais)
+                return opcao_relatorios_operacionais
+            case 2:
+                pass
+                return opcao_relatorios_operacionais
+            case 3:
+                pass
+                return opcao_relatorios_operacionais
+            case 4:
+                pass
+                return opcao_relatorios_operacionais
+            case _:
+                print("Opção Inválida!")
+    except:
+        print("Opção Inválida!")
 
 exibir_opcoes()
-
