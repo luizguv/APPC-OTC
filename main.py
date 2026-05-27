@@ -11,7 +11,7 @@ def exibir_opcoes():
     try:
         match opcao:
             case 1:
-                cadastro_pedidos()
+                cadastro_pedidos(opcao)
                 return opcao
             case 2:
                 pass
@@ -38,7 +38,31 @@ def finalizar_sistema():
     print("========================")
 
 def cadastro_pedidos(opcao):
-    print(f"Você escolheu a opção: {opcao}")
-    print(f"")
+    print(f"Você escolheu a opção: 1. Cadastrar Pedidos")
+    id_pedido = input("Digite o ID do pedido: ")
+    nome_cliente = input("Digite seu nome: ")
+    endereco = input("Digite o endereço: ")
+    prioridade = int(input("Digite qual a prioridade (1 - Alta, 2 - Normal): "))
+    descricao_pedido = input("Digite a descrição do pedido: ")
+    status_pedido = int(input("Digite o status do pedido (1 - Pendente, 2 - Em Rota, 3 - Entregue e 4 - Cancelado): "))
+    id_entregador = input("Digite o ID do entregador: ")
+
+    return id_pedido, nome_cliente, endereco, prioridade, descricao_pedido, status_pedido, id_entregador
+
+def cadastro_entregadores():
+    print(f"Você escolheu a opção: 2. Cadastro de Entregadores")
+    # ID ENTREGADOR
+    nome_entregador = input("Digite o nome do entregador: ")
+    veiculo = int(input("Digite qual é o veículo (1 - Carro, 2 -  Van, 3 - Moto): "))
+    # ID PEDIDO PENDENTE
+    disponibilidade = input("Digite qual a disponibilidade do entregador: ")
+
+    return nome_entregador, veiculo, disponibilidade
+
+def atualizacao_pedidos():
+    print(f"Você escolheu a opção: 3. Atualização dos Pedidos")
+    alterar_status = int(input("Digite qual o status atual do pedido (1 - Pendente, 2 - Em Rota, 3 - Entregue e 4 - Cancelado): "))
+    
 
 exibir_opcoes()
+
